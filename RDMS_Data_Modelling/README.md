@@ -9,11 +9,11 @@ The dataset consists of songs metadata and logs from user activity on the applic
 # Project Structure
 * data/log_data: Contains user activity logs
 * data/song_data: Contains songs and artist metadata
-* sql_queries.py: Contains SQL statements to define, manipulate and query tables 
+* sql_queries.py: Contains SQL statements to define, manipulate and query tables
 * create_tables.py: Creates databases and related tables
 * etl.ipynb: Exploratory notebook to develop the ETL process
 * etl.py : Python script to perform ETL and load the database with all the data
-* test.ipynb: Notebook to validate whether the tables in the database are being populated 
+* test.ipynb: Notebook to validate whether the tables in the database are being populated
 
 #### How To Execute Scripts:
 
@@ -28,24 +28,21 @@ Run etl.py to perform ETL on the JSON files and populate the tables
 #### Fact table
 ##### Songplays
 #
-![None](https://r766469c826263xjupyterllyjhwqkl.udacity-student-workspaces.com/files/Assets/FactTable.jpg)
+![None](https://github.com/atulya22/DataEngineering/blob/master/RDMS_Data_Modelling/assets/FactTable.jpg)
 
 #### Dimension Tables
 ##### Users
 
-![None](https://r766469c826263xjupyterllyjhwqkl.udacity-student-workspaces.com/files/Assets/Dim_User.jpg?)
+![None](https://github.com/atulya22/DataEngineering/blob/master/RDMS_Data_Modelling/assets/Dim_User.jpg)
 
 ##### Songs
 
-![None](https://r766469c826263xjupyterllyjhwqkl.udacity-student-workspaces.com/files/Assets/Dim_Songs.jpg?)
+![None](https://github.com/atulya22/DataEngineering/blob/master/RDMS_Data_Modelling/assets/Dim_Songs.jpg)
 
 ##### Artist
 
-![None](https://r766469c826263xjupyterllyjhwqkl.udacity-student-workspaces.com/files/Assets/Dim_Artist.jpg?_xsrf=2%7C9594220f%7C6dd7c7aad189c36d823e417137068b06%7C1588709479)
+![None](https://github.com/atulya22/DataEngineering/blob/master/RDMS_Data_Modelling/assets/Dim_Artist.jpg)
 
 ##### Time
 
-![None](https://r766469c826263xjupyterllyjhwqkl.udacity-student-workspaces.com/files/Assets/Dim_Time.jpg?_xsrf=2%7C9594220f%7C6dd7c7aad189c36d823e417137068b06%7C1588709479)
-
-
-
+![None](https://github.com/atulya22/DataEngineering/blob/master/RDMS_Data_Modelling/assets/Dim_Time.jpg)
