@@ -5,10 +5,13 @@ In this project, we build an ETL pipeline that extracts songs and user activity 
 #### Dataset
 The dataset consists of songs metadata and logs from user activity on the application. 
 The data resides on buckets hosted in Amazon S3.
+
 **Song Data**: Collection of JSON files partitioned by the first three letters of each songs track ID. Each file contains a single song track with metadata about the song and the song's artist. 
 `s3://udacity-dend/song_data`
+
 **Log Data**: Collection of JSON files containing logs about user activity on the application. It is partitioned by year and month.
  `s3://udacity-dend/log_data`
+
 **Log data mappings**: JSON file to map log data to approriate column in the staging tables
 `s3://udacity-dend/log_json_path.json`
 
@@ -21,10 +24,31 @@ The data resides on buckets hosted in Amazon S3.
 ##### Redshift Cluster
 
 The project uses a **4 node DC2.large cluster**. The cluster has an IAM role set to **AmazonS3ReadOnlyAccess**.
+##### Schema
+
+**Staging_Events**
+![](https://raw.githubusercontent.com/atulya22/DataEngineering/master/DataWarehouse/Assets/DimArtist.jpg)
+
+**Staging_Songs**
+![](https://raw.githubusercontent.com/atulya22/DataEngineering/master/DataWarehouse/Assets/StagingSongs.jpg)
+
+**SongPlays**
+![](https://raw.githubusercontent.com/atulya22/DataEngineering/master/DataWarehouse/Assets/FactSongPlays.jpg)
+
+Songs
+![](https://raw.githubusercontent.com/atulya22/DataEngineering/master/DataWarehouse/Assets/DimSongs.jpg)
+
+Artists
+![](https://raw.githubusercontent.com/atulya22/DataEngineering/master/DataWarehouse/Assets/DimArtist.jpg)
+Users
+![](https://raw.githubusercontent.com/atulya22/DataEngineering/master/DataWarehouse/Assets/DimUser.jpg)
+Time
+![](https://raw.githubusercontent.com/atulya22/DataEngineering/master/DataWarehouse/Assets/DimTime.jpg)
 
 ##### How to run
-Run create_tables.py to initiate a Redshift connection and create the staging and dimension tables
+
+* Fill out the Redshift cluster endpoints and database credentials in the dwh.cfg file
+* Run create_tables.py to initiate a Redshift connection and create the staging and dimension tables
 `python create_tables.py`
-Run etl.py to copy data from S3 buckets to the staging tables in Redshift and finally transform and load the data from the staging tables onto the dimension tables.
+* Run etl.py to copy data from S3 buckets to the staging tables in Redshift and finally transform and load the data from the staging tables onto the dimension tables.
 `python etl.py`
-##### Results
